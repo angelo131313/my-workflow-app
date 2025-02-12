@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Button, Typography } from '@material-ui/core';
+import { Container, Button, Typography } from '@mui/material';
 import { notify } from '../utils/notify';
 
 function FocusMode() {
@@ -34,7 +34,14 @@ function FocusMode() {
       <Button variant="contained" color="primary" onClick={() => setIsRunning(!isRunning)}>
         {isRunning ? 'Pause' : 'Start'}
       </Button>
-      <Button variant="contained" style={{ marginLeft: 10 }} onClick={() => { setTimeLeft(25 * 60); setIsRunning(false); }}>
+      <Button 
+        variant="contained" 
+        sx={{ marginLeft: 1 }} 
+        onClick={() => { 
+          setTimeLeft(25 * 60); 
+          setIsRunning(false); 
+        }}
+      >
         Reset
       </Button>
     </Container>

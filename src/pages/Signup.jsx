@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button } from '@material-ui/core';
+import { Container, TextField, Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
 
